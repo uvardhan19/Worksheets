@@ -1,0 +1,137 @@
+﻿Machine Learning
+Worksheet 1
+
+
+In Q1 to Q7, only one option is correct, Choose the correct option:
+
+
+1. The value of correlation coefficient will always be:
+A) between 0 and 1 B) greater than -1 C) between -1 and 1 D) between 0 and -1
+Answer- C
+
+
+2. Which of the following cannot be used for dimensionality reduction? 
+A) Lasso Regularisation B) PCA
+C) Recursive feature elimination D) Ridge Regularisation
+Answer- B
+
+
+3. Which of the following is not a kernel in Support Vector Machines?
+ A) linear B) Radial Basis Function C) hyperplane D) polynomial
+Answer- C
+
+
+4. Amongst the following, which one is least suitable for a dataset having non-linear decision boundaries? 
+A) Logistic Regression B) Naïve Bayes Classifier
+C) Decision Tree Classifier D) Support Vector Classifier
+Answer- D
+
+
+5. In a Linear Regression problem, ‘X’ is independent variable and ‘Y’ is dependent variable, where ‘X’ represents weight in pounds. If you convert the unit of ‘X’ to kilograms, then new coefficient of ‘X’ will be?
+(1 kilogram = 2.205 pounds)
+
+A) 2.205 × old coefficient of ‘X’ B) same as old coefficient of ‘X’
+C) old coefficient of ‘X’ ÷ 2.205 D) Cannot be determined
+Answer- C
+
+
+   6. As we increase the number of estimators in ADABOOST Classifier, what happens to the accuracy of the model?
+
+A) remains same B) increases
+C) decreases D) none of the above
+Answer- B
+
+
+   7. Which of the following is not an advantage of using random forest instead of decision trees?
+
+A) Random Forests reduce overfitting
+B) Random Forests explains more variance in data then decision trees C) Random Forests are easy to interpret
+D) Random Forests provide a reliable feature importance estimate
+Answer- B
+
+
+In Q8 to Q10, more than one options are correct, Choose all the correct options:
+
+
+   8. Which of the following are correct about Principal Components?
+A) Principal Components are calculated using supervised learning techniques B) Principal Components are calculated using unsupervised learning techniques C) Principal Components are linear combinations of Linear Variables.
+D) All of the above
+Answer- B & C
+
+
+   9. Which of the following are applications of clustering?
+
+A) Identifying developed, developing and under-developed countries on the basis of factors like GDP, poverty index, employment rate, population and living index
+B) Identifying loan defaulters in a bank on the basis of previous years’ data of loan accounts.
+C) Identifying spam or ham emails
+D) Identifying different segments of disease based on BMI, blood pressure, cholesterol, blood sugar levels.
+Answer- B & C
+
+
+   10. Which of the following is(are) hyper parameters of a decision tree? 
+A) max_depth B) max_features
+C) n_estimators D) min_samples_leaf
+Answer- A , B & D
+
+
+Q11 to Q15 are subjective answer type questions, Answer them briefly.
+
+
+11. What are outliers? Explain the InterQuartile Range(IQR) method for outlier detection?
+Answer-
+Outliers are nothing but the observations which lie at the abnormal distance from the other random samples. It can be easily identified on the Box plot or scatter diagram. As these outliers are far away from the other data points so they are problematic for statistical analysis and it can cause tests to either significant findings / distort real results.
+Through the Interquartile range , outliers could be defined as a point which is falling more than 1.5 times the IQR which is above the 3rd quartile and below the 1st quartile.
+   1. Q1 represents the 25th percentile of the data.
+   2. Q2 represents the 50th percentile of the data.
+   3. Q3 represents the 75th percentile of the data.
+It is represented as :  IQR = Q3-Q1
+The data points which are falling below Q1 - 1.5 IQR or above Q3+1.5 IQR
+
+
+12. What is the primary difference between bagging and boosting algorithms?
+Answer-
+There are two types of Ensemble learning Bagging and Boosting. These two help in decreasing the variance of the single estimate when they combined with several estimates from different models.
+Difference between Bagging and boosting are as follows:
+   1. Bagging is the simplest way of combining the prediction belongs to the same type where Boosting helps with the combining prediction that belongs to the different type.
+   2. Bagging aims to reduce variance, not bias where Boosting aims to reduce bias, not variance.
+   3. Under Bagging each model receives equal weightage where under boosting models are weighted according to their performance.
+   4. Bagging , each model is built independently where Boosting the new models are influenced by the performance of the previously built models.
+   5. Bagging helps in solving the over-fitting problem whereas Boosting helps in reducing the bias.
+   6. If the classifier is unstable then apply Bagging such as Random Forest otherwise when the classifier is stable and simple we should apply Boosting such as Gradient Boosting.
+
+
+13. What is adjusted R2 in logistic regression. How is it calculated?
+Answer-
+Adjusted R2  tries to measure the proportion of the variation which is explained by those independent variables that helps in explaining the dependent variables. It disciplines you for adding independent variables that do not actually help in predicting the dependent variables.
+Adjusted R2 could be calculated based on the value of R-Squared (R2), number of independent variables which are the predictors and total sample size :
+Adjusted R2 =1-(1-R2)(N-1) / N-p-1
+Where: R2 = sample R-square, p = number of predictors, N= Total Sample size.
+
+
+It is derived that :
+   1. Adjusted R-Squared increases when the independent variable is significant and i effects dependent variables.
+   2. Adjusted R2 could be negative where R2 is close to zero
+   3. The value of Adjusted R2 will be always equal to or less than R-Squared.
+With respect to this Adjusted R2 should be used to compare models and it should be used while selecting different important predictors for the regression model.
+
+
+
+
+
+
+14. What is the difference between standardisation and normalisation?
+Answer- 
+Under Machine Learning , feature scaling is an important issue, here we have the two scaling methods which are used most: Normalization and Standardization. Normalization means rescaling the values into a range of [0,1] where Standardization means rescaling data to have a mean of 0 and a standard deviation of 1 which is unit variance.
+With respect to the Standardization, this scaling is done on the data when we need to do the multivariate analysis on data of different units where if our data is not normally distributed we need to do Normalization.
+Standardization is also called as Standard Scaler  where Normalization is also called as Min-Max Scaler. 
+In contrast to Standardization , we are going to obtain smaller standard deviation with the process of Min-Max Normalization.
+
+
+
+
+15. What is cross-validation? Describe one advantage and one disadvantage of using cross-validation.
+Answer-
+Cross-validation is derived as a technique which is used for the assessment on how the results of statistical analysis is generalized to an independent dataset. It is used vastly in settings where the target is prediction and it is necessary to estimate the accuracy of the performance of a predictive model. It is used other than the conventional validation because the availability of the data is not enough for partitioning them into separate training and test sets which results in the loss of testing and modeling capacity.
+There are advantages and disadvantages pertaining to Cross-validation :
+Advantage- Reduces Overfitting- According to the cross validation you split the data into multiple folds and train them on different folds which prevents our dataset model to undergo overfitting of the training dataset, this is a good sign of a robust algorithm. The chance of overfitting is less in the large availability or sufficient dataset.
+Disadvantage- Increase Training Time- Other than the advantage , we have a disadvantage for cross validation, that is , it drastically increases the training time. Before you had to train your model on one training set but as we go ahead with cross validation you will have to train the model on the multiple training sets.
