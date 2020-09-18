@@ -1,0 +1,77 @@
+MACHINE LEARNING – 
+WORKSHEET 3
+Q1 to Q15 are subjective answer type questions, Answer them briefly.
+1. Give a short description of each Linear, RBF, Polynomial kernels used in SVM.
+Answer: 
+1. Polynomial Kernel: Under machine learning the polynomial kernel is a kernel which is used commonly with the SVM (Support vector machines)and other models which helps in representing the similarity of vectors or training samples within a feature space over polynomials of the original variables.
+Equation is : k(Xi , Xj) = (Xi . Xj +1)d  - where d is the degree of the polynomial
+2. RBF: Radial Basis Function is also a popular Kernel method which is used in support vector machine models. Its value depends on the distance which is from the origin or any other point.
+Equation is: L(X1 , X2)= exponent(-y||X1-X2||2)  - ||X1 -X2||=euclidean distance between X1 & X2
+3. Linear: Under this method the classification is to be performed by using linear or non-linear kernels. SVM aims to find the hyperplane which separates the data points under training sets having the farthest distance.
+
+
+2. R-squared or Residual Sum of Squares (RSS) which one of these two is a better measure of goodness of fit of model in regression and why??
+Answer: RSS or Residual sum of squares is the better measure of the goodness of fit of the model in regression as it gives us the total square of the distance of actual points from the regression line also gives us the variation in the target variable which is not explained by our models, where as there is a problem with the r squared that is the value is never decreases no matter if the number of the variables we add in our regression model. It remains the same or increases with the increase of new independent variables.
+3. What are TSS (Total Sum of Squares), ESS (Explained Sum of Squares) and RSS (Residual Sum of Squares) in regression. Also mention the equation relating these three metrics with each other.
+Answer: The total sum of squares is a variation of the value dependent variable which is from the sample mean of the dependent variable. The regression sum of squares describes how well a regression model represents the modeled data. A higher regression sum of squares indicates that the model does not fit the data well.The residual sum of squares essentially measures the variation of modeling errors. In other words, it depicts how the variation in the dependent variable in a regression model cannot be explained by the model where a lower residual sum of squares indicates that the regression model can explain better data while a higher residual sum of squares indicates that the data is explained poorly.
+
+
+Equation:
+TSS = SSR +SSE
+Where: 
+TSS= Total sum of squares.
+SSR= Explained sum of squares.
+SSE= Residual sum of squares.
+
+
+  
+4. What is Gini –impurity index?
+Answer: Gini index is also known as Gini impurity index which is there to calculate the amount of probability of a specific feature that is classified incorrectly when ever selected randomly otherwise if all the elements are linked with a single class then it is known as pure.
+5. Are unregularized decision-trees prone to overfitting? If yes, why?
+Answer: Yes , decision - tree is prone to overfitting as it is due to the amount of speciality we look at leading to smaller samples of events that meet the previous assumptions. This small sample could lead the unsound conclusions. Evaluate the splits before growing the tree. If the split gives less error on Test data then attach the node to the decision tree otherwise discard that split.
+
+
+6. What is an ensemble technique in machine learning?
+Answer: Ensemble learning combines the predictions from multiple neural network models in order to reduce the variance of the predictions and reduce generalization error. Techniques for ensemble learning can be grouped by the element that is varied, such as training data, the model, and how predictions are combined. Ensemble learning is usually used to average the predictions of different models to get a better prediction. 
+7. What is the difference between Bagging and Boosting techniques?
+Answer: Difference between Bagging and boosting are as follows:
+1. Bagging is the simplest way of combining the prediction belongs to the same type where Boosting helps with the combining prediction that belongs to the different type.
+2. Bagging aims to reduce variance, not bias where Boosting aims to reduce bias, not variance.
+3. Under Bagging each model receives equal weightage where under boosting models are weighted according to their performance.
+4. Bagging , each model is built independently where Boosting the new models are influenced by the performance of the previously built models.
+5. Bagging helps in solving the over-fitting problem whereas Boosting helps in reducing the bias.
+6. If the classifier is unstable then apply Bagging such as Random Forest otherwise when the classifier is stable and simple we should apply Boosting such as Gradient Boosting.
+
+
+8. What is out-of-bag error in random forests?
+Answer: Out-of-bag error, also called out-of-bag estimate it is a method of measuring the prediction error of random forests, boosted decision trees, and other machine learning models utilizing bootstrap aggregating (bagging) to subsample data samples used for training.
+9. What is K-fold cross-validation?
+Answer: Cross-validation is a statistical method used to estimate the skill of machine learning models.
+It is commonly used in applied machine learning to compare and select a model for a given predictive modeling problem because it is easy to understand, easy to implement, and results in skill estimates that generally have a lower bias than other methods.
+* That k-fold cross validation is a procedure used to estimate the skill of the model on new data.
+* There are common tactics that you can use to select the value of k for your dataset.
+* There are commonly used variations on cross-validation such as stratified and repeated that are available in scikit-learn.
+
+
+10. What is hyper parameter tuning in machine learning and why it is done?
+Answer: When creating a machine learning model, you'll be presented with design choices as to how to define your model architecture. Oftentimes, we don't immediately know what the optimal model architecture should be for a given model, and thus we'd like to be able to explore a range of possibilities. In true machine learning fashion, we'll ideally ask the machine to perform this exploration and select the optimal model architecture automatically. Parameters which define the model architecture are referred to as hyperparameters and thus this process of searching for the ideal model architecture is referred to as hyperparameter tuning.
+11. What issues can occur if we have a large learning rate in Gradient Descent?
+Answer: Whenever the learning rate is too high or large then the gradient descent can increase in advertently rather than decreasing the training error otherwise when the learning rate is too small then training is not only slowere but may become permanently stuck with a high training error.
+12. What is bias-variance trade off in machine learning?
+Answer: Bias is the simplifying assumptions made by the model to make the target function easier to approximate. Variance is the amount that the estimate of the target function will change given different training data. Trade-off is tension between the error introduced by the bias and the variance thus we could achieve bias variance trade off Adjusting minor values in algorithms: This in turn would increase the bias of the model. Whereas, in the SVM algorithm, the trade-off can be changed by an increase in the C parameter that would influence the violations of the margin allowed in the training data. This will increase the bias but decrease the variance.
+13. What is the need of regularization in machine learning?
+Answer: The major aspect of machine learning is to avoid overfitting , Regularization is a form of regression, that constrains/ regularizes or shrinks the coefficient estimates towards zero. In other words, this technique discourages learning a more complex or flexible model, so as to avoid the risk of overfitting. There are two types of regularization : 1) Lasso ,  2) Ridge
+
+
+14. Differentiate between Adaboost and Gradient Boosting?
+
+
+Answer: Both are boosting algorithms which means that they convert a set of weak learners into a single strong learner. They both initialise a strong learner (usually a decision tree) and iteratively create a weak learner that is added to the strong learner. They differ on how they create the weak learners during the iterative process.
+At each iteration, adaptive boosting changes the sample distribution by modifying the weights attached to each of the instances. It increases the weights of the wrongly predicted instances and decreases the ones of the correctly predicted instances. The weak learner thus focuses more on the difficult instances. After being trained, the weak learner is added to the strong one according to his performance (so-called alpha weight). The higher it performs, the more it contributes to the strong learner.
+On the other hand, gradient boosting doesn’t modify the sample distribution. Instead of training on a newly sample distribution, the weak learner trains on the remaining errors (so-called pseudo-residuals) of the strong learner. It is another way to give more importance to the difficult instances. At each iteration, the pseudo-residuals are computed and a weak learner is fitted to these pseudo-residuals. Then, the contribution of the weak learner (so-called multiplier) to the strong one isn’t computed according to his performance on the newly distributed sample but using a gradient descent optimisation process. The computed contribution is the one minimising the overall error of the strong learner.
+
+
+15. Can we use Logistic Regression for classification of Non-Linear Data? If not, why?
+
+
+Answer: Linear regression is suitable for predicting output that is continuous value, such as predicting the price of a property. The regression line is generally a straight line. Whereas logistic regression is for classification problems, which predicts a probability range between 0 to 1. Logistic regression has traditionally been used to come up with a hyperplane that separates the feature space into classes. But if we suspect that the decision boundary is nonlinear we may get better results by attempting some nonlinear functional forms for the logit function
