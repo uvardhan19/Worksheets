@@ -1,0 +1,95 @@
+﻿WORKSHEET-3
+SQL
+1. Write SQL query to create table Customers.
+Answer:
+Create table customers (
+CustomerNumber int,
+CustomerName varchar(200),
+contactLastName varchar(100),
+contactFirstName varchar(100),
+Phone int,
+addressLine1 char(50),
+addressLine2 char(50),
+City varchar (20),
+State varchar(30),
+PostalCode int,
+Country varchar(30),
+salesRepEmployeeNumber char(10),
+creditLimit int,
+Primary key (Phone),
+Unique(CustomerNumber),
+Index name(contactFirstName, contactLastName) comment ‘By contactFirstName and/or contactLastName’
+);
+
+
+2. Write SQL query to create table Orders.
+Answer:
+Create table orders(
+OrderNumber int,
+OrderDate datetime,
+RequiredDate datetime,
+ShippedDate datetime,
+Status varchar(10),
+Comments char(200),
+CustomerNumber int,
+Primary key(OrderNumber),
+Unique(CustomerNumber),
+);
+
+
+3. Write SQL query to show all the columns data from the Orders Table.
+Answer:
+Select * from Orders;
+4. Write SQL query to show all the comments from the Orders Table.
+Answer:
+Select comments from orders;
+5. Write a SQL query to show orderDate and Total number of orders placed on that date, from Orders table.
+Answer:
+Select OrderNumber, OrderDate from Orders where OrderDate = yyyy-mm-dd;
+
+
+6. Write a SQL query to show employeNumber, lastName, firstName of all the employees from employees table.
+Select employeeNumber,lastName,firstName from employees;
+
+
+7. Write a SQL query to show all orderNumber, customerName of the person who placed the respective order.
+Answer:
+Select a.OrderNumber, b.CustomerName as “CustomerOrders” from Orders a left outer join Customers b on a.CustomerNumber=b.CustomerNumber order by a.OrderNumber;
+
+
+8. Write a SQL query to show name of all the customers in one column and salerepemployee name in another Column.
+Answer:
+Select CustomerName , salesRepEmployeeNumber from Customers;
+
+
+9. Write a SQL query to show Date in one column and total payment amount of the payments made on that date from the payments table.
+Answer: 
+Select PaymentDate, amount from Payments;
+
+
+10. Write a SQL query to show all the products productName, MSRP, productDescription from the products table.
+Answer:
+select productName , MSRP , productDescription  from products;
+
+
+11. Write a SQL query to print the productName, productDescription of the most ordered product.
+Answer:
+Select a.ProductName , a.ProductDescription, b.quantityOrdered as “MostOrderedProduct” from Products a left outer join Orderdetails b on a.productcode=b.productcode order by b.quantityOrdered;
+
+
+12. Write a SQL query to print the city name where maximum number of orders were placed.
+Answer:
+Select max (city) from (select orderNumber from orderdetails ) Customers group by city; 
+13. Write a SQL query to get the name of the state having maximum number of customers.
+Answer:
+Select max (state) from (select customerName, count(customerName) State from Customers group by state; 
+14. Write a SQL query to print the employee number in one column and Full name of the employee in the second column for all the employees.
+Answer:
+Select saleRepEmployeeNumber , customerName from customers;
+
+
+15. Write a SQL query to print the orderNumber, customer Name and total amount paid by the customer for that order (quantityOrdered × priceEach).
+Answer: 
+Select orderNumber, quantityOrdered*PriceEach as TotalAmountPaid from Orderdetails;
+Select a.orderNumber , a.TotalAmountPaid, b.customerNumber  as “msql” from orderdetails a left outer join orders b on a.orderNumber=b.orderNumber order by b.CustomerNumber;
+Select a.orderNumber, a.TotalAmountPaid , b.CustomerName as “CustomerOrdersNum” from msql a left outer join Customers b on a.CustomerNumber=b.CustomerNumber order by a.OrderNumber;
