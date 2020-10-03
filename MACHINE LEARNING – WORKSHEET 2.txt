@@ -1,0 +1,79 @@
+﻿MACHINE LEARNING – WORKSHEET 2
+In Q1 to Q5, only one option is correct, Choose the correct option:
+1. In which of the following you can say that the model is overfitting?
+A) High R-squared value for train-set and High R-squared value for test-set. B) Low R-squared value for train-set and High R-squared value for test-set. C) High R-squared value for train-set and Low R-squared value for test-set. D) None of the above
+Ans: A
+   2. Which among the following is a disadvantage of decision trees? A) Decision trees are prone to outliers. B) Decision trees are highly prone to overfitting. C) Decision trees are not easy to interpret D) None of the above.
+Ans: B
+   3. Which of the following is an ensemble technique?
+A) SVM   C) Random Forest   B) Logistic Regression   D) Decision tree
+Ans: C
+      4. Suppose you are building a classification model for detection of a fatal disease where detection of the disease is most important. In this case which of the following metrics you would focus on? A) Accuracy B) Sensitivity
+C) Precision D) None of the above.
+Ans: B
+         5. The value of AUC (Area under Curve) value for ROC curve of model A is 0.70 and of model B is 0.85. Which of these two models is doing better job in classification?
+A) Model A B) Model B
+C) both are performing equal D) Data Insufficient
+Ans: B
+In Q6 to Q9, more than one options are correct, Choose all the correct options:
+            6. Which of the following are the regularization technique in Linear Regression?? A) Ridge B) R-squared C) MSE D) Lasso
+Ans: A & D
+            7. Which of the following is not an example of boosting technique?
+A) Adaboost B) Decision Tree C) Random Forest D) Xgboost.
+Ans: A & D
+               8. Which of the techniques are used for regularization of Decision Trees?
+A) Pruning B) L2 regularization C) Restricting the max depth of the tree D) All of the above
+Ans: A & C
+                  9. Which of the following statements is true regarding the Adaboost technique?
+A) We initialize the probabilities of the distribution as 1/n, where n is the number of data-points
+B) A tree in the ensemble focuses more on the data points on which the previous tree was not performing well C) It is example of bagging technique
+D) None of the above
+Ans: B & C
+Q10 to Q15 are subjective answer type questions, Answer them briefly.
+10. Explain how does the adjusted R-squared penalize the presence of unnecessary predictors in the model? 
+Ans: The adjusted R2 will penalize you for adding independent variables (K in the equation) that do not fit the model. The adjusted R2 will compensate for this by penalizing you for those extra variables. While values are usually positive also they can be negative as well. In regression analysis, it can be tempting to add more variables to the data as you think of them. Some of those variables will be significant, but you can’t be sure that significance is just by chance. The adjusted R2 will compensate for this by penalizing you for those extra variables.
+While values are usually positive, they can be negative as well. This could happen if your R2 is zero; After the adjustment, the value can dip below zero. This usually indicates that your model is a poor fit for your data. Other problems with your model can also cause sub-zero values, such as not putting a constant term in your model.
+
+
+11. Differentiate between Ridge and Lasso Regression.
+Ans: Ridge Regression : 
+In Ridge regression, we add a penalty term which is equal to the square of the coefficient. The L2 term is equal to the square of the magnitude of the coefficients. We also add a coefficient  Lamda to control that penalty term. In this case if Lamda is zero then the equation is the basic OLS else if Lamda is greater than 0 then it will add a constraint to the coefficient. As we increase the value of Lamda this constraint causes the value of the coefficient to tend towards zero. This leads to both low variance (as some coefficient leads to negligible effect on prediction) and low bias (minimization of coefficient reduce the dependency of prediction on a particular variable).
+Limitation of Ridge Regression: Ridge regression decreases the complexity of a model but does not reduce the number of variables since it never leads to a coefficient being zero rather only minimizes it. Hence, this model is not good for feature reduction.
+
+
+Lasso Regression : 
+Lasso regression stands for Least Absolute Shrinkage and Selection Operator. It adds penalty term to the cost function. This term is the absolute sum of the coefficients. As the value of coefficients increases from 0 this term penalizes, cause model, to decrease the value of coefficients in order to reduce loss. The difference between ridge and lasso regression is that it tends to make coefficients to absolute zero as compared to Ridge which never sets the value of coefficient to absolute zero.
+Limitation of Lasso Regression: 
+                     * Lasso sometimes struggles with some types of data. If the number of predictors (p) is greater than the number of observations (n), Lasso will pick at most n predictors as non-zero, even if all predictors are relevant (or may be used in the test set). 
+                     * If there are two or more highly collinear variables then LASSO regression select one of them randomly which is not good for the interpretation of data
+12. What is VIF? What is the suitable value of a VIF for a feature to be included in a regression modelling? 
+Ans:Variance inflation factor (VIF) is a measure of the amount of multicollinearity in a set of multiple regression variables. Mathematically, the VIF for a regression model variable is equal to the ratio of the overall model variance to the variance of a model that includes only that single independent variable.
+VIF is the reciprocal of the tolerance value ; small VIF values indicate low correlation among variables under ideal conditions VIF<3. However it is acceptable if it is less than 10.
+13. Why do we need to scale the data before feeding it to the train model?
+Ans: Deep learning neural networks learn how to map inputs to outputs from examples in a training dataset. Data scaling is a recommended pre-processing step when working with deep learning neural networks. Data scaling can be achieved by normalizing or standardizing real-valued input and output variables. Feature Scaling or Standardization: It is a step of Data Pre Processing which is applied to independent variables or features of data. It basically helps to normalise the data within a particular range. Sometimes, it also helps in speeding up the calculations in an algorithm.
+14. What are the different metrics which are used to check the goodness of fit in linear regression?
+Ans: We will look at a variety of concepts that fall into the general category of goodness of fit, including: 
+                     * Examining residuals from the model
+                     * Outlier detection
+                     * A global measure of “variance explained”, R2
+                     * A global measure of “variance explained” that is adjusted for the number of parameters in a model, adjusted R2
+                     * Chi-square goodness of fit tests
+                     * Model validation via an outside data set or by splitting a data set
+
+
+15. From the following confusion matrix calculate sensitivity, specificity, precision, recall and accuracy. Actual/Predicted True False
+True 1000 50
+False 250 1200
+Ans:
+ Accuracy
+Accuracy = (TP+TN)/(TP+FP+FN+TN)
+Ans= (1000+1200)/(1000+50+250+1200)= 0.88 
+Precision
+Precision = TP/(TP+FP)
+Ans: 1000/(1000+50)= 0.9523
+Recall (aka Sensitivity)
+Recall = TP/(TP+FN)
+Ans: 1000/(1000+250) = 0.80
+Specificity
+Specificity = TN/(TN+FP)   
+Ans: 1200/(1200+50)= 0.96
