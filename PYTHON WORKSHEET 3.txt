@@ -1,0 +1,36 @@
+﻿WORKSHEET 3
+PYTHON
+Q1 to Q8 have only one correct answer. Choose the correct option to answer your question.
+1. Which of the following will raise a value error in python? A) int(32) B) int(3.2)
+C) int(-3.2) D) int(‘32’)
+Ans: D
+   2. What will be the output of round(3.567)?
+A) 3.5 B) 3.0 C) 4 D) 3
+Ans: C
+      3. How is the function pow(a,b,c) evaluated in python? A) a**b**c B) (a**b)%c C) (a**b)*c D) (a**b)**c
+Ans: B
+      4. What will be the output of print(type(type(int))) in python 3? A) <class ‘type’> B) <type ‘type’>
+C) <class ‘int’> D) <type ‘int’>
+Ans: A
+         5. What will be the output of ord(chr(65))?
+A) ‘A’ B) ‘a’
+C) 65 D) TypeError
+Ans: 65
+            6. What is called when a function is defined inside a class? A) Module B) Function
+C) _init_ function D) Method
+Ans: D
+               7. What will be the output of all([1, 0, 5 ,7])?
+A) 0 B) False C) True D) error
+Ans: B
+                  8. Is the output of the function abs() the same as that of the function math.fabs()? A) Always B) SometimesC) Never D) None of these
+Ans: B
+Q9 and Q10 have multiple correct answers. Choose all the correct options to answer your question.
+                  9. Select all correct float numbers in python?
+A) -68.7e100 B) 42e3 C) 4.2038 D) 3.0
+Ans: A,C & D
+                     10. Which of the following is(are) correct statement(s) in python?
+A) You can pass positional arguments in any order.
+B) You can pass keyword arguments in any order.
+C) You can call a function with positional and keyword arguments.
+D) Positional arguments must be before keyword arguments in a function call
+Ans: B & D
