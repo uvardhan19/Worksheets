@@ -1,0 +1,93 @@
+﻿MACHINE LEARNING
+WORKSHEET – 5
+In Q1 to Q7, only one option is correct, Choose the correct option:
+1. What is the advantage of hierarchical clustering over K-means clustering?
+A) hierarchical clustering is computationally less expensive
+B) in hierarchical clustering you don’t need to assign number of clusters in beginning C) Both are equally proficient D) None of these
+Ans: C
+   2. Which of the following hyper parameter(s), when increased may cause random forest to over fit the data? A) max_depth B) entropy
+C) min_samples_leaf D) min_samples_splits
+Ans: A
+      3. Which of the following is the least preferable resampling method in handling imbalanced datasets? A) SMOTE B) RandomOverSampler
+C) RandomUnderSampler D) ADASYN
+Ans: A
+         4. Which of the following statements is/are true about “Type-1” and “Type-2” errors?
+         1. Type1 is known as false positive and Type2 is known as false negative.
+         2. Type1 is known as false negative and Type2 is known as false positive.
+         3. Type1 error occurs when we reject a null hypothesis when it is actually true.
+A) 1 and 2 B) 1 only
+C) 1 and 3 D) 2 and 3
+Ans: C
+         5. Arrange the steps of k-means algorithm in the order in which they occur:
+         1. Randomly selecting the cluster centroids
+         2. Updating the cluster centroids iteratively
+         3. Assigning the cluster points to their nearest centre
+A) 3-1-2 B) 2-1-3
+C) 3-2-1 D) 1-3-2
+Ans: D
+         6. Which of the following algorithms is not advisable to use when you have limited CPU resources and time, and when the data set is relatively large?
+A) Decision Trees B) Support Vector Machines C) K-Nearest Neighbours D) Logistic Regression
+Ans: B
+            7. What is the main difference between CART (Classification and Regression Trees) and CHAID (Chi Square Automatic Interaction Detection) Trees?
+A) CART is used for classification, and CHAID is used for regression.
+B) CART can create multiway trees (more than two children for a node), and CHAID can only create binary trees (a maximum of two children for a node).
+C) CART can only create binary trees (a maximum of two children for a node), and CHAID can create multiway trees (more than two children for a node)
+D) None of the above
+Ans: D
+In Q8 to Q10, more than one options are correct, Choose all the correct options:
+               8. In Ridge and Lasso regularisation if you take a large value of regularisation constant(lambda), which of the following things may occur?
+A) Ridge will lead to some of the coefficients to be very close to 0
+B) Lasso will lead to some of the coefficients to be very close to 0
+C) Ridge will cause some of the coefficients to become 0
+D) Lasso will cause some of the coefficients to become 0
+Ans: B & C
+                  9. Which of the following methods can be used when there are correlated features in the dataset?
+A) remove both features from the dataset
+B) remove only one of the features
+C) Use ridge regularisation D) use Lasso regularisation
+Ans: C & D
+10. After using linear regression, we find that the bias is very low, while the variance is very high. What are the possible reasons for this?
+A) Overfitting B) Multicollinearity
+C) Underfitting D) Outliers
+Ans: A & B
+Q10 to Q15 are subjective answer type questions, Answer them briefly.
+                     11. In which situation One-hot encoding must be avoided? Which encoding technique can be used in such a case?
+Ans:
+We know that we prefer to use One-Hot Encoding not Label Encoding when processing with non-ordinal data, which gives the difference between Label Encoding and One-Hot Encoding.
+So I am wondering why One-Hot Encoder can avoid the situation that the model will misunderstand the data to be in some kind of order, 0<1<2 , 0<1<2 if the data has been Label Encoding.One-Hot-Encoding has the advantage that the result is binary rather than ordinal and that everything sits in an orthogonal vector space. The disadvantage is that for high cardinality, the feature space can really blow up quickly and you start fighting with the curse of dimensionality.
+PCA: Dimensionality reduction refers to reducing the number of input variables for a dataset. If your data is represented using rows and columns, such as in a spreadsheet, then the input variables are the columns that are fed as input to a model to predict the target variable.
+                     12. In case of data imbalance problems in classification, what techniques can be used to balance the dataset? Explain them briefly.
+Ans: 
+                     1. Use the right evaluation metrics 
+Applying inappropriate evaluation metrics for model generated using imbalanced data can be dangerous. Imagine our training data is the one illustrated in graph above. If accuracy is used to measure the goodness of a model, a model which classifies all testing samples into “0” will have an excellent accuracy (99.8%), but obviously, this model won’t provide any valuable information for us.
+                     2. Resample the training set
+Apart from using different evaluation criteria, one can also work on getting different dataset. Two approaches to make a balanced dataset out of an imbalanced one are under-sampling and oversampling.
+                     3. Use K-fold Cross-Validation in the right way
+It is noteworthy that cross-validation should be applied properly while using over-sampling method to address imbalance problems.
+Keep in mind that over-sampling takes observed rare samples and applies bootstrapping to generate new random data based on a distribution function. 
+                     4. Ensemble different resampled datasets
+The easiest way to successfully generalize a model is by using more data. The problem is that out-of-the-box classifiers like logistic regression or random forest tend to generalize by discarding the rare class. One easy best practice is building n models that use all the samples of the rare class and n-differing samples of the abundant class.
+                     5. Resample with different ratios
+The previous approach can be fine-tuned by playing with the ratio between the rare and the abundant class. The best ratio  heavily depends on the data and the models that are used. But instead of training all models with the same ratio in the ensemble, it is worth trying to ensemble different ratios.  
+
+
+                     13. What is the difference between SMOTE and ADASYN sampling techniques?
+Ans: The key difference between ADASYN and SMOTE is that the former uses a density distribution, as a criterion to automatically decide the number of synthetic samples that must be generated for each minority sample by adaptively changing the weights of the different minority samples to compensate for the skewed distributions. The latter generates the same number of synthetic samples for each original minority sample.
+                     14. What is the purpose of using GridsearchCV? Is it preferable to use in case of large datasets? Why or why not?
+Ans: It is the process of performing hyperparameter tuning in order to determine the optimal values for a given model. As mentioned above, the performance of a model significantly depends on the value of hyperparameters. Note that there is no way to know in advance the best values for hyperparameters so ideally, we need to try all possible values to know the optimal values. Doing this manually could take a considerable amount of time and resources and thus we use GridSearchCV to automate the tuning of hyperparameters.
+No It is not preferable to use GridSearchCV for the large dataset as it take very little time, but may raise errors if the dataset is large and not enough
+                     15. List down some of the evaluation metrics used to evaluate a regression model. Explain each of them in brief.
+Ans: 
+                     1. Confusion matrix:
+A confusion matrix is an N X N matrix, where N is the number of classes being predicted. For the problem in hand, we have N=2, and hence we get a 2 X 2 matrix. Here are a few definitions, you need to remember for a confusion matrix
+                     2. F1 Score
+In the last section, we discussed precision and recall for classification problems and also highlighted the importance of choosing precision/recall basis for our use case. 
+                     3. Area Under the ROC curve (AUC – ROC)
+This is again one of the popular metrics used in the industry.  The biggest advantage of using an ROC curve is that it is independent of the change in proportion of responders.
+                     4. Root Mean Squared Error (RMSE)
+RMSE is the most popular evaluation metric used in regression problems. It follows an assumption that errors are unbiased and follow a normal distribution. Here are the key points to consider on RMSE:
+                     1. The power of ‘square root’  empowers this metric to show large number deviations.
+                     2. The ‘squared’ nature of this metric helps to deliver more robust results which prevents cancelling the positive and negative error values. In other words, this metric aptly displays the plausible magnitude of error term.
+                     3. It avoids the use of absolute error values which is highly undesirable in mathematical calculations.
+5)  Root Mean Squared Logarithmic Error
+In case of Root mean squared logarithmic error, we take the log of the predictions and actual values. So basically, what changes are the variance that we are measuring. RMSLE is usually used when we don’t want to penalize huge differences in the predicted and the actual values when both predicted and true values are huge numbers
