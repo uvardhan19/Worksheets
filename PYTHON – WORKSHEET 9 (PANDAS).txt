@@ -1,0 +1,44 @@
+﻿PYTHON – WORKSHEET 9 (PANDAS)
+Q1 to Q8 have only one correct answer. Choose the correct option to answer your question.
+1. Which among the following options can be used to create a DataFrame in Pandas? A) An ndarray B) a python dictionary
+C) A scalar value D) All of the above
+Ans: D
+   2. A series is a one-dimensional array which is labelled and can hold any data type.
+A) True B) False
+Ans: A
+      3. Which of the following operations works with the same syntax as the analogous dictionary operations?
+A) Getting columns B) setting columns
+C) deleting columns D) All of the above
+Ans: D
+         4. pandas.NA = = pandas.NA, will give the following result?
+A) <NA> B) True
+C) False D) Error
+Ans: A
+            5. A panel is a ______ container of data in pandas?
+A) 1 dimensional B) 2 dimensional
+C) 3 dimensional D) infinite dimension
+Ans: C
+               6. What will be the output of the following lines of code?
+import pandas as pd
+import numpy as np
+s = pd.Series(np.random.randn(4)) print(s.ndim)
+A) Error B) 3 C) 2 D) 1
+Ans: D
+               7. Which of the following indexing capabilities is used as a concise means of selecting data from a pandas object??
+A) in B) iy C) ix D) ipy
+Ans: C
+                  8. All pandas data structures are ___ mutable but not always _______mutable. 
+A) size, value B) value, size
+C) semantic, size D) None of these
+Ans: B
+Q9 and Q10 have multiple correct answers. Choose all the correct options to answer your question.
+                  9. Select the correct statements from the following.
+A) A DataFrame is like a fixed-size dictionary in that you can get and set values by index label.
+B) Series can be passed into most NumPy methods expecting an ndarray.
+C) A key difference between Series and ndarray is that operations between Series automatically align the data based on label
+D) In pandas, Index values must be unique
+Ans: C & D
+                  10. Which of the following file formats are allowed for input output in pandas? 
+A) JSON B) HTML
+C) CSV D) TXT
+Ans: B, C & D
