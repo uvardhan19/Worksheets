@@ -1,0 +1,89 @@
+﻿Statistics– WORKSHEET 4
+Q1 to Q9 have only one correct answer. Choose the correct option to answer your question.
+1. Bernoulli random variables take (only) the values 1 and 0.
+      a) True
+      b) False
+Ans: A
+2. Which of the following theorems states that the distribution of averages of iid variables, properly normalized, becomes that of a standard normal as the sample size increases?
+a) Central Limit Theorem
+b) Central Mean Theorem
+c) Centroid Limit Theorem
+d) All of the mentioned
+Ans: A
+3. Which of the following is incorrect with respect to use of Poisson distribution?
+a) Modeling event/time data
+b) Modeling bounded count data
+c) Modeling contingency tables
+d) All of the mentioned
+Ans: B
+4. Point out the correct statement.
+a) The exponent of a normally distributed random variables follows what is called the log-normal distribution
+b) Sums of normally distributed random variables are again normally distributed even if the variables are dependent
+c) The square of a standard normal random variable follows what is called chi-squared distribution
+d) All of the mentioned-
+Ans: D
+5. _ random variables are used to model rates.
+a) Empirical
+b) Binomial
+c) Poisson
+d) All of the mentioned
+Ans: C
+6. Usually replacing the standard error by its estimated value does change the CLT.
+a) True
+b) False
+Ans: B
+7. Which of the following testing is concerned with making decisions using data?
+a) Probability
+b) Hypothesis
+c) Causal
+d) None of the mentioned
+Ans: B
+8. Normalized data are centered at ___ and have units equal to standard deviations of the original data.
+a) 0 b) 5 c) 1 d) 10
+Ans: A
+9. Which of the following statements is incorrect with respect to outliers?
+a) Outliers can have varying degrees of influence
+b) Outliers can be the result of spurious or real processes
+c) Outliers cannot conform to the regression relationship
+d) None of the mentioned
+Ans: C
+Q10and Q15 are subjective answer type questions, Answer them in your own words briefly.
+10. What do you understand by the term Normal Distribution?
+Ans: Normal distribution, also known as the Gaussian distribution, is a probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean. In graph form, normal distribution will appear as a bell curve.
+11. How do you handle missing data? What imputation techniques do you recommend?
+Ans: Missing data (or missing values) is defined as the data value that is not stored for a variable in the observation of interest. The problem of missing data is relatively common in almost all research and can have a significant effect on the conclusions that can be drawn from the data. Accordingly, some studies have focused on handling the missing data, problems caused by missing data, and the methods to avoid or minimize such in medical research.
+However, until recently, most researchers have drawn conclusions based on the assumption of a complete data set.
+
+
+The method used in handling missing data are :
+1. Listwise or case deletion.
+2. Pairwise deletion. 
+3. Mean substitution.
+4. Regression imputation.
+5. Last observation carried forward.
+6. Maximum likelihood. 
+7. Expectation-Maximization.
+8. Multiple imputation.
+
+
+12. What is A/B testing?
+Ans: A/B testing is the process of comparing two variations of a page element, usually by testing users' response to variant A vs variant B, and concluding which of the two variants is more effective.
+There are various reasons why we do A/B testing. A few of them include solving visitor pain points, increasing website conversions or leads, and decreasing the bounce rate. Read our guide to know the rest of the reasons.
+13. Is mean imputation of missing data acceptable practice?
+Ans: Yes,  mean imputation of missing data acceptable practice because of the following reasons: 
+* Bad practice in general
+* If just estimating means: mean imputation preserves the mean of the observed data
+* Leads to an underestimate of the standard deviation
+* Distorts relationships between variables by “pulling” estimates of the correlation toward zero
+
+
+14. What is linear regression in statistics?
+Ans: In statistics, linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables). For more than one explanatory variable, the process is called multiple linear regression. Linear regression is the next step up after correlation. It is used when we want to predict the value of a variable based on the value of another variable. The variable we want to predict is called the dependent variable (or sometimes, the outcome variable).
+15. What are the various branches of statistics?
+Ans: The two main branches of statistics are descriptive statistics and inferential statistics. Both of these are employed in scientific analysis of data and both are equally important for the student of statistics. 
+Descriptive Statistics
+CONCEPT  The branch of statistics that focuses on collecting, summarizing, and presenting a set of data.
+EXAMPLES  The average age of citizens who voted for the winning candidate in the last presidential election, the average length of all books about statistics, the variation in the weight of 100 boxes of cereal selected from a factory's production line.
+Inferential Statistics
+CONCEPT  The branch of statistics that analyzes sample data to draw conclusions about a population.
+EXAMPLE  A survey that sampled 2,001 full-or part-time workers ages 50 to 70, conducted by the American Association of Retired Persons (AARP), discovered that 70% of those polled planned to work past the traditional mid-60s retirement age.
