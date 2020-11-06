@@ -1,0 +1,107 @@
+﻿DEEP LEARNING – WORKSHEET 3
+Q1 to Q8 are MCQs with only one correct answer. Choose the correct option.
+1. Which of the following is true about model capacity (where model capacity means the ability of neural networks to approximate complex functions)?
+A) As dropout ratio increases, model capacity increases
+B) As number of hidden layers increase, model capacity increases
+C) As learning rate increases, model capacity increases
+D) None of the above
+Ans: B
+   2. Batch Normalization is helpful because?
+A) It is a very efficient backpropagation technique
+B) It returns back the normalized mean and standard deviation of weights C) It normalizes (changes) all the input before sending it to the next layer D) None of the above
+Ans: C
+      3. What if we use a learning rate that’s too large?
+A) Network will not converge B) Network will converge C) either A or B D) None of the above
+Ans: A
+         4. What are the factors to select the depth of a neural network?
+i) Type of neural network (e.g. MLP, CNN etc.)
+ii) Input data
+iii) Computation power, i.e. Hardware capabilities and software capabilities iv) Learning Rate
+v) The output function to map
+A) 1, 2, 4, 5 B) 2, 3, 4, 5 C) 1, 3, 4, 5 D) All of these
+Ans: D
+            5. Suppose you have inputs as x, y, and z with values -2, 5, and -4 respectively. You have a neuron ‘q’ and neuron ‘f’ with functions:
+q=x+y
+f=q*z
+Graphical representation of the functions is as follows:
+What is the gradient of F with respect to x, y, and z? (use chain rule of derivatives to find the solution) A) (3, -4, -4) B) (-3, 4, 4)
+C) (-4, -4, 3) D) (4, 4, 3)
+Ans: C
+               6. Which of the following statements is the best description of early stopping?
+               * A)  Train the network until a local minimum in the error function is reached
+               * B)  Simulate the network on a test dataset after every epoch of training. Stop training when the generalization
+error starts to increase
+               * C)  Add a momentum term to the weight update in the Generalized Delta Rule, so that training converges more
+Quickly
+               * D) None of the above
+         Ans: B
+                  7. Which gradient descent technique is more advantageous when the data is too big to handle in RAM simultaneously?
+A) Mini Batch Gradient Descent B) Stochastic Gradient Descent
+C) Full Batch Gradient Descent D) either A or B
+Ans: B
+                     8. Consider the scenario. The problem you are trying to solve has a small amount of data. Fortunately, you have a
+pre-trained neural network that was trained on a similar problem. Which of the following methodologies would you choose to make use of this pre-trained network?
+A) Freeze all the layers except the last, retrain the last layer
+B) Assess on every layer how the model performs and only select a few of them
+C) Fine tune the last couple of layers only D) Re-train the model for the new dataset
+Ans: A
+Q9 and Q10 are MCQs with one or more correct answers. Choose all the correct options.
+                        9. Which of the following neural network training challenges can be solved using batch normalization? A) Overfitting B) Training is too slow
+C) Restrict activations to become too high or low
+D) None of these
+Ans: B & C
+                           10. For a binary classification problem, which of the following activations may be used in the output layer? A) ReLU B) sigmoid
+C) softmax D) Leaky ReLU
+Ans: A & B
+
+
+Q11 to Q15 are subjective answer type questions. Answer them briefly.
+11. What will happen if we do not use activation functions in artificial neural networks?
+Ans: As linear transformations make the neural network simpler, but this network would be less powerful and will not be able to learn the complex patterns from the data. A neural network without an activation function is essentially just a linear regression model.
+12. How does forward propagation and backpropagation work in deep learning?
+Ans: In neural networks, you forward propagate to get the output and compare it with the real value to get the error.
+Now, to minimize the error, you propagate backwards by finding the derivative of error with respect to each weight and then subtracting this value from the weight value.
+The basic learning that has to be done in neural networks is training neurons when to get activated. Each neuron should activate only for a particular type of input and not all inputs. Therefore, by propagating forward you see how well your neural network is behaving and find the error. After you find out that your network has error, you back propagate and use a form of gradient descent to update new values of weights. Then, you will again forward propagate to see how well those weights are performing and then will backward propagate to update the weights. This will go on until you reach some minima for error value.
+
+
+13. Explain briefly the following variant of Gradient Descent: Stochastic, Batch, and Mini-batch?
+Ans: 
+Batch Gradient Descent, all the training data is taken into consideration to take a single step. We take the average of the gradients of all the training examples and then use that mean gradient to update our parameters. So that’s just one step of gradient descent in one epoch.
+
+
+Deep learning models crave for data. The more the data the more chances of a model to be good. Suppose our dataset has 5 million examples, then just to take one step the model will have to calculate the gradients of all the 5 million examples. This does not seem an efficient way. To tackle this problem we have Stochastic Gradient Descent. In Stochastic Gradient Descent (SGD), we consider just one example at a time to take a single step. We do the following steps in one epoch for SGD:
+                              1. Take an example
+                              2. Feed it to Neural Network
+                              3. Calculate it’s gradient
+                              4. Use the gradient we calculated in step 3 to update the weights
+                              5. Repeat steps 1–4 for all the examples in training dataset
+
+
+Batch Gradient Descent can be used for smoother curves. SGD can be used when the dataset is large. Batch Gradient Descent converges directly to minima. SGD converges faster for larger datasets. But, since in SGD we use only one example at a time, we cannot implement the vectorized implementation on it. This can slow down the computations. To tackle this problem, a mixture of Batch Gradient Descent and SGD is used.
+Neither we use all the dataset all at once nor we use the single example at a time. We use a batch of a fixed number of training examples which is less than the actual dataset and call it a mini-batch. Doing this helps us achieve the advantages of both the former variants we saw. So, after creating the mini-batches of fixed size, we do the following steps in one epoch:
+                              1. Pick a mini-batch
+                              2. Feed it to Neural Network
+                              3. Calculate the mean gradient of the mini-batch
+                              4. Use the mean gradient we calculated in step 3 to update the weights
+                              5. Repeat steps 1–4 for the mini-batches we created
+
+
+
+
+14.What are the main benefits of Mini-batch Gradient Descent?
+Ans: The main advantages of mini - batch gradient Descent are as follows: 
+                              * Easily fits in the memory.
+                              * It is computationally efficient.
+                              * Benefit from vectorization.
+                              * If stuck in local minimums, some noisy steps can lead the way out of them.
+                              * Average of the training samples produces stable error gradients and convergence.
+
+
+15. What is transfer learning?
+Ans: Transfer learning is a machine learning method where a model developed for a task is reused as the starting point for a model on a second task.
+It is a popular approach in deep learning where pre-trained models are used as the starting point on computer vision and natural language processing tasks given the vast compute and time resources required to develop neural network models on these problems and from the huge jumps in skill that they provide on related problems.
+In this post, you will discover how you can use transfer learning to speed up training and improve the performance of your deep learning model.
+After reading this post, you will know:
+                              * What transfer learning is and how to use it.
+                              * Common examples of transfer learning in deep learning.
+                              * When to use transfer learning on your own predictive modeling problems.
