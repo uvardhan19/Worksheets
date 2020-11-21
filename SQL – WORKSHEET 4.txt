@@ -1,0 +1,33 @@
+﻿SQL – WORKSHEET 4
+1. SELECT *
+FROM orders
+WHERE shipped date = any
+SELECT  AVG(shipped date)
+FROM orders 
+2. SELECT orders(orderdate) , COUNT(id) AS num_orders , SUM(order_total) AS daily_total FROM [orders] GROUP BY orders(orderdate)
+3. SELECT productname, MSRP
+   FROM products
+   WHERE MSRP = 
+    (SELECT MIN(MSRP) FROM Products);
+4. SELECT productname, quantityinstock
+   FROM products
+   WHERE quantityinstock = 
+    (SELECT MIN(quantityinstock) FROM Products);
+5. SELECT  ordernumber, quantityordered(*) as Total_Order
+FROM order details
+Group By item 
+Order By quantity ordered(*) desc;
+6. SELECT * FROM customers WHERE customername IN (SELECT max(checkNumberpaymentDateamount) FROM payments WHERE customer name IN (SELECT customer name FROM payments));
+7. SELECT customername,city
+FROM customers
+where city = Melbourne city
+8. 
+
+
+
+
+
+15. SELECT customerNumber,checkNumberpaymentDateamount 
+     FROM payments
+    WHERE checkNumberpaymentDateamount > 1000
+ ORDER BY checkNumberpaymentDateamount DESC, customerNumber;
