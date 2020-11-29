@@ -1,0 +1,88 @@
+﻿WORKSHEET-1
+DEEP LEARNING
+Q1 to Q8 are MCQs with only one correct answer. Choose the correct option.
+Which of the following can approximate any function universally (i.e. universal approximators)? A) Boosted Decision Trees B) Neural Networks
+C) Kernel SVM D) All of the above
+Ans: B
+In which of the following domains we cannot use neural networks?
+A) Image Processing B) Speech Processing
+C) Fraud Detection D) None of the above
+Ans: D
+Rearrange the following steps of a gradient descent algorithm in correct order of their occurrence? i. Initialize random weight and bias
+ii. Repeat the process until you find the best weights of network
+iii. Change weights and biases for each neuron to reduce the error
+iv. Calculate error distances between the actual and the predicted value
+v. Pass an input through the network and get values from output layer
+Choose the correct option:
+A) iv – i – iii – v – ii
+C) i – v – iv – iii – ii
+B) v – i – iii – iv –ii D) i – v – iii –iv –ii
+Ans: C
+What is the full form of RNN?
+A) Recurrent Neural Network
+C) Redundant Neural Network
+B) Recursive Neural Network D) Resurrection Neural Network
+Ans: A
+What is plasticity in neural networks? 
+A) input pattern keeps on changing C) output pattern keeps on changing
+B) input pattern has become static D) output is static
+Ans: A
+What is stability plasticity dilemma?
+A) system can neither be stable nor plastic
+B) static inputs & categorization can’t be handled
+C) dynamic inputs & categorization can’t be handled D) none of the above
+Ans: D
+Read the following statements:
+Statement 1: It is possible to train a network well by initializing all the weights as 0 Statement 2: It is possible to train a network well by initializing biases as 0
+Which of the statements given above is true, Choose the correct option?
+A) Statement 1 is true while Statement 2 is false
+B) Statement 2 is true while statement 1 is false
+C) Both statements are true
+D) Both statements are false
+Ans: B
+Which of the following architecture has feedback connections?
+A) Recurrent Neural network B) Convolutional Neural Network C) Restricted Boltzmann Machine D) simple Artificial Neural Network
+Ans: A
+Q9 and Q10 are MCQs with one or more correct answers. Choose all the correct options.
+9. In training a neural network, you notice that the loss does not decrease in the few starting epochs. The reason behind it could be
+A) Learning Rate is low B) Regularisation parameter is high
+C) Regularisation parameter is low D) Stuck at local minima
+Ans: A, B & D
+   10. Which of the following function(s) can be used to impart non – linearity in a neural network? A) Stochastic Gradient Descent B) Rectified Linear Unit
+C) Convolution Function D) Sigmoid Function
+Ans: B
+Q11 to Q15 are subjective answer type question. Answer them briefly.
+11. What is Deep Learning?
+Deep Learning is a subfield of machine learning concerned with algorithms inspired by the structure and function of the brain called artificial neural networks.
+If you are just starting out in the field of deep learning or you had some experience with neural networks some time ago, you may be confused. I know I was confused initially and so were many of my colleagues and friends who learned and used neural networks in the 1990s and early 2000s.
+The leaders and experts in the field have ideas of what deep learning is and these specific and nuanced perspectives shed a lot of light on what deep learning is all about.
+
+
+12. What is reinforcement learning?
+Reinforcement learning is the training of machine learning models to make a sequence of decisions. The agent learns to achieve a goal in an uncertain, potentially complex environment. In reinforcement learning, an artificial intelligence faces a game-like situation. The computer employs trial and error to come up with a solution to the problem. To get the machine to do what the programmer wants, the artificial intelligence gets either rewards or penalties for the actions it performs. Its goal is to maximize the total reward.
+Although the designer sets the reward policy–that is, the rules of the game–he gives the model no hints or suggestions for how to solve the game. It’s up to the model to figure out how to perform the task to maximize the reward, starting from totally random trials and finishing with sophisticated tactics and superhuman skills. By leveraging the power of search and many trials, reinforcement learning is currently the most effective way to hint machine’s creativity. In contrast to human beings, artificial intelligence can gather experience from thousands of parallel gameplays if a reinforcement learning algorithm is run on a sufficiently powerful computer infrastructure.
+13. What Are the Differences Between Machine Learning and Deep Learning?
+1. Human Intervention
+Whereas with machine learning systems, a human needs to identify and hand-code the applied features based on the data type (for example, pixel value, shape, orientation), a deep learning system tries to learn those features without additional human intervention. Take the case of a facial recognition program. The program first learns to detect and recognize edges and lines of faces, then more significant parts of the faces, and then finally the overall representations of faces. The amount of data involved in doing this is enormous, and as time goes on and the program trains itself, the probability of correct answers (that is, accurately identifying faces) increases. And that training happens through the use of neural networks, similar to the way the human brain works, without the need for a human to recode the program. 
+2. Hardware
+Due to the amount of data being processed and the complexity of the mathematical calculations involved in the algorithms used, deep learning systems require much more powerful hardware than simpler machine learning systems. One type of hardware used for deep learning is graphical processing units (GPUs). Machine learning programs can run on lower-end machines without as much computing power.
+3. Time
+As you might expect, due to the huge data sets a deep learning system requires, and because there are so many parameters and complicated mathematical formulas involved, a deep learning system can take a lot of time to train. Machine learning can take as little time as a few seconds to a few hours, whereas deep learning can take a few hours to a few weeks!
+4. Approach
+Algorithms used in machine learning tend to parse data in parts, then those parts are combined to come up with a result or solution. Deep learning systems look at an entire problem or scenario in one fell swoop. For instance, if you wanted a program to identify particular objects in an image (what they are and where they are located—license plates on cars in a parking lot, for example), you would have to go through two steps with machine learning: first object detection and then object recognition. With the deep learning program, on the other hand, you would input the image, and with training, the program would return both the identified objects and their location in the image in one result.
+5. Applications
+Given all the other differences mentioned above, you probably have already figured out that machine learning and deep learning systems are used for different applications. Where they are used: Basic machine learning applications include predictive programs (such as for forecasting prices in the stock market or where and when the next hurricane will hit), email spam identifiers, and programs that design evidence-based treatment plans for medical patients. In addition to the examples mentioned above of Netflix, music-streaming services and facial recognition, one highly publicized application of deep learning is self-driving cars—the programs use many layers of neural networks to do things like determine objects to avoid, recognize traffic lights and know when to speed up or slow down. 
+
+
+14. What is a perceptron?
+A neural network is an interconnected system of perceptrons, so it is safe to say perceptrons are the foundation of any neural network. Perceptrons can be viewed as building blocks in a single layer in a neural network, made up of four different parts:
+      1. Input Values or One Input Layer
+      2. Weights and Bias
+      3. Net sum
+      4. Activation function
+A neural network, which is made up of perceptrons, can be perceived as a complex logical statement (neural network) made up of very simple logical statements (perceptrons); of “AND” and “OR” statements. A statement can only be true or false, but never both at the same time. The goal of a perceptron is to determine from the input whether the feature it is recognizing is true, in other words whether the output is going to be a 0 or 1.
+
+
+15. What’s the difference between AI and ML?
+Artificial Intelligence : The word Artificial Intelligence comprises of two words “Artificial” and “Intelligence”. Artificial refers to something which is made by human or non natural thing and Intelligence means ability to understand or think. There is a misconception that Artificial Intelligence is a system, but it is not a system .AI is implemented in the system. There can be so many definition of AI, one definition can be “It is the study of how to train the computers so that computers can do things which at present human can do better.”Therefore It is a intelligence where we want to add all the capabilities to machine that human contain.
+Machine Learning : Machine Learning is the learning in which machine can learn by its own without being explicitly programmed. It is an application of AI that provide system the ability to automatically learn and improve from experience. Here we can generate a program by integrating input and output of that program. One of the simple definition of the Machine Learning is “Machine Learning is said to learn from experience E w.r.t some class of task T and a performance measure P if learners performance at the task in the class as measured by P improves with experiences.”
