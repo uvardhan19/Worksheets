@@ -1,0 +1,13 @@
+﻿MACHINE LEARNING – WORKSHEET 8 (REGRESSION)
+All the questions in this worksheet have one or more than one correct answer. Choose all the correct options to answer your questions.
+Answers:
+1. A
+2. B
+3. C
+4. A & C
+5. D
+6. B
+7. A & B
+8. D
+9. C
+10. C
