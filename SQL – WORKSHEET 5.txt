@@ -1,0 +1,48 @@
+﻿SQL – WORKSHEET 5
+1. Write SQL query to show all the data in the Movie table.
+Ans: SELECT * FROM movie
+2. Write SQL query to show the title of the longest runtime movie.
+Ans: SELECT runtime FROM movie WHERE ((movie.movie_ID)=[MovieGenre].[Movie]) GROUP BY tblMovie.runtime;
+3. Write SQL query to show the highest revenue generating movie title.
+Ans: SELECT revenue  FROM movie WHERE revenue ("highest revenue")
+4. Write SQL query to show the movie title with maximum value of revenue/budget.
+Ans: SELECT title  FROM movie WHERE revenue ("highest revenue")
+5. Write a SQL query to show the movie title and its cast details like name of the person, gender, character name, cast order.
+Ans: SELECT title  FROM movie WHERE cast_details(person, gender, character name, cast order.);
+6. Write a SQL query to show the country name where maximum number of movies has been produced, along with the number of movies produced.
+Ans: SELECT title, rating FROM movies INNER JOIN boxoffice  ON movies.id = boxoffice.movie_id ORDER BY rating DESC;
+
+
+7. Write a SQL query to show all the genre_id in one column and genre_name in second column.
+Ans: SELECT movies.*, genres.name FROM movies INNER JOIN genres_in_movies ON genres_in_movies.movie_id = movies.id INNER JOIN genres ON genres_in_movies.genre_id = genres.id GROUP BY movies.title;
+
+
+8. Write a SQL query to show name of all the languages in one column and number of movies in that particular column in another column.
+Ans: SELECT dir_fname,dir_lname, gen_title,count(gen_title)
+FROM director
+NATURAL JOIN movie_direction
+NATURAL JOIN movie_genres
+NATURAL JOIN genres
+GROUP BY dir_fname, dir_lname,gen_title
+ORDER BY dir_fname,dir_lname;
+
+
+9. Write a SQL query to show movie name in first column, no. of crew members in second column and number of cast members in third column.
+Ans: SELECT mov_title, mov_year, gen_title, dir_fname, dir_lname
+FROM movie
+NATURAL JOIN movie_genres
+NATURAL JOIN genres
+NATURAL JOIN movie_direction
+NATURAL JOIN director;
+
+
+10. Write a SQL query to list top 10 movies title according to popularity column in decreasing order.
+Ans: SELECT movie.mov_title, mov_year, mov_dt_rel,
+       mov_time,dir_fname, dir_lname 
+FROM movie
+JOIN  movie_direction 
+   ON movie.mov_id = movie_direction.mov_id
+JOIN director 
+   ON movie_direction.dir_id=director.dir_id
+WHERE mov_dt_rel <'01/01/1989'
+ORDER BY mov_dt_rel desc;
