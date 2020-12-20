@@ -1,0 +1,67 @@
+﻿MACHINE LEARNING – WORKSHEET 11 (LINEAR REGRESSION)
+In Q1 to Q8, only one option is correct, Choose the correct option:
+1. What happens to R2 measure if we add a new feature?
+A) remains same B) always increases C) may or may not increase D) always decreases
+Ans:  B
+   2. The correct relationship between SST, SSR and SSE is given by:
+A) SSR = SST + SSE B) SST = SSR + SSE C) SSE = SSR – SST D) None of the above
+Ans: D
+      3. Residuals in regression analysis can be defined as:
+A) difference between the actual value and the predicted value.
+B) difference between the actual value and the mean of predicted value. C) difference between the actual value and mean of dependent variable. D) None of the above.
+Ans: A
+         4. In a simple linear regression model, if we change the input variable by 1 unit, then how much output variable will change?
+A) By 1 B) No Change
+C) By its slope D) None of the above
+Ans: A
+            5. If the coefficient of determination is equal to 1, then correlation coefficient:
+A) must also be equal to 1 B) can be either -1 or 1
+C) can be any value between -1 to 1 D) must be -1
+Ans: C
+               6. Which of the following plot is best suited for the linear relationship of continuous variables?
+ 
+A) Scatter plot
+C) Pie charts
+B) Histograms
+D) All of the above
+Ans: A
+               7. The ratio of MSR/MSE produces:
+A) t-statistics
+C) z-statistics
+B) f-statistics
+D) None of the above.
+Ans: B
+
+
+                  8. Which of the following regularizations uses only L2 normalization for its penalty parameter?
+A) Lasso B) Elastic Nets
+C) Ridge D) All of the above
+Ans: D
+In Q9 to Q11, more than one options are correct, Choose all the correct options:
+9. Which of the following statement/s are true for best fitted line?
+A) It shows the causal relationship between dependent and independent variables
+B) It shows the positive or negative relation between dependent and independent variables C) It always goes through origin
+D) It is a straight line that is the best approximation of the given data sets
+Ans: B & C
+                     10. Regularizations helps in:
+A) Reducing the training time C) Automatic feature selection B) Generalizing the test set D) Grouping the data
+Ans: A & C
+                        11. Linear regression can be implemented through: A) Normal Equation
+C) Parity checks B) Singular Value Decomposition D) nodes
+Ans: C & D
+Q12 to Q15 are subjective answer type questions, Answer them briefly.
+12. Explain R2 and adjusted R2 metrics?
+Ans: R2 shows how well terms (data points) fit a curve or line. Adjusted R2 also indicates how well terms fit a curve or line, but adjusts for the number of terms in a model. ... If you add more useful variables, adjusted r-squared will increase. Adjusted R2 will always be less than or equal to R2.
+13. Explain the cost function of linear regression?
+Ans: A cost function is a measure of how wrong the model is in terms of its ability to estimate the relationship between X and y. This is typically expressed as a difference or distance between the predicted value and the actual value. The cost function (you may also see this referred to as loss or error.)
+14. Differentiate SSE, SSR and SST.
+Ans: SST is the maximum sum of squares of errors for the data because the minimum information of Y itself was only used for the baseline model. ... The difference between SST and SSR is remaining unexplained variability of Y after adopting the regression model, which is called as sum of squares of errors (SSE).
+15. What are the various evaluation metrics for linear regression?
+Ans: Machine learning is continuously growing and is said to affect all domains and bring a radical change in the way human race functions. Few advancements have already started having an impact on the society like the fraud detection systems, the online loan approval systems, self-driving cars, tumour detection etc. Machine learning algorithms have already become part of our daily routines, from news recommendations in the morning to optimized movie recommendation from Netflix in the evening, everything we use is directly or indirectly affected or will be affected soon by machine learning.
+Machine learning is basically of two types i.e Supervised Learning and Unsupervised Learning. Supervised Learning can be simply taken as learning with the help of a teacher. This means we have the data points along with labels for each data point. Unsupervised Learning, on the other hand, can be considered as learning without a teacher. In this, we are just given raw data without any labels and the algorithm is supposed to find patterns in the data and group it accordingly. Most of the progress in machine learning is achieved in the supervised learning world while the unsupervised world remains mysterious and not completely explored.
+Supervised Machine learning can perform two tasks i.e Classification and Regression. Classification in very high-level terms is the task of assigning labels to data samples belonging to different classes, for e.g training, a neural network to distinguish between cats and dogs is a classification problem with cats and dogs being the two classes.
+Regression, on the other hand, is the task of predicting continuous values by learning from various independent features. for e.g Predicting the price of a house based on features like the number of bedrooms, locality etc.
+The basic classification or regression pipeline works as follows:
+                           1. We start by some initial configuration of the model and predict the output based on some input.
+                           2. The predicted value is then compared with the target and the measure of our model performance is taken.
+                           3. Then the various parameters of the model are adjusted iteratively in-order to reach the optimal value of the performance metric.
